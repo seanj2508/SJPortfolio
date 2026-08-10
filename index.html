@@ -195,13 +195,18 @@
   .tl-date{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin-left:auto;}
   .tl-item ul{margin-left:20px; color:var(--ink-soft); font-size:15px;}
   .tl-item li{margin-bottom:6px;}
-  .tl-item p{color:var(--ink-soft); font-size:15px; max-width:680px;}
-  .tl-photos{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;}
+  .tl-body{display:grid; grid-template-columns:1fr 300px; gap:32px; align-items:start;}
+  .tl-body p{color:var(--ink-soft); font-size:15px; margin:0;}
+  .tl-photos{display:flex; flex-direction:column; gap:12px;}
   .tl-photos img{
-    width:160px; height:120px; object-fit:cover;
+    width:100%; aspect-ratio:4/3; object-fit:cover;
     border:1px solid var(--line); filter:grayscale(15%) contrast(1.03);
   }
-  @media (max-width:480px){ .tl-photos img{width:47%; height:100px;} }
+  @media (max-width:820px){
+    .tl-body{grid-template-columns:1fr;}
+    .tl-photos{flex-direction:row; flex-wrap:wrap;}
+    .tl-photos img{width:calc(50% - 6px);}
+  }
 
   /* PROJECTS */
   .proj-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px;}
@@ -361,10 +366,12 @@
           <span class="tl-org">— Kappa Alpha Psi Fraternity Inc., Wake Forest (Omicron Sigma Chapter)</span>
           <span class="tl-date">Apr 2025 – May 2026</span>
         </div>
-        <p>In my final year as an undergraduate member of Kappa Alpha Psi Fraternity Inc., I had the opportunity to serve as President of my school's chapter. Working alongside my fellow chapter members, I helped organize and host a range of service and community events throughout the year, an experience that deepened my love of collaboration and leading through it. Highlights included a recurring service event at the Ronald McDonald House, where we cooked meals for families staying there, and a visit to a local elementary school to read to students and put together the ingredients for the kids to make their own monkey bread. We balanced that service work with events built purely for fun and connection, including our annual roller-skating night, Roll Bounce, and a game night open to everyone.</p>
-        <div class="tl-photos">
-          <img src="kappa-1.jpg" alt="Reading and monkey bread event at a local elementary school" loading="lazy">
-          <img src="kappa-2.jpg" alt="Preparing a meal for families at the Ronald McDonald House" loading="lazy">
+        <div class="tl-body">
+          <p>In my final year as an undergraduate member of Kappa Alpha Psi Fraternity Inc., I had the opportunity to serve as President of my school's chapter. Working alongside my fellow chapter members, I helped organize and host a range of service and community events throughout the year, an experience that deepened my love of collaboration and leading through it. Highlights included a recurring service event at the Ronald McDonald House, where we cooked meals for families staying there, and a visit to a local elementary school to read to students and put together the ingredients for the kids to make their own monkey bread. We balanced that service work with events built purely for fun and connection, including our annual roller-skating night, Roll Bounce, and a game night open to everyone.</p>
+          <div class="tl-photos">
+            <img src="kappa-1.jpg" alt="Reading and monkey bread event at a local elementary school" loading="lazy">
+            <img src="kappa-2.jpg" alt="Preparing a meal for families at the Ronald McDonald House" loading="lazy">
+          </div>
         </div>
       </div>
       <div class="tl-item">
@@ -373,10 +380,12 @@
           <span class="tl-org">— Artificial Intelligence Club, Wake Forest University</span>
           <span class="tl-date">Oct 2024 – May 2026</span>
         </div>
-        <p>Recognizing a growing interest among students in engaging with the rapidly evolving field of AI, a classmate and I set out to create a space where students could explore it together, leading to the founding of Wake Forest's Artificial Intelligence Club. The idea came easily; the process that followed didn't. Recruiting committed members and building a structure that kept people engaged taught me a lot about what it actually takes to turn an idea into a working organization. In my final year, our club had the opportunity to take on a faculty-advised research project focused on segmenting lung infections from CT scans.</p>
-        <div class="tl-photos">
-          <img src="aiclub-1.jpg" alt="Wake Forest Artificial Intelligence Club meeting" loading="lazy">
-          <img src="aiclub-2.jpg" alt="Wake Forest Artificial Intelligence Club presenting research" loading="lazy">
+        <div class="tl-body">
+          <p>Recognizing a growing interest among students in engaging with the rapidly evolving field of AI, a classmate and I set out to create a space where students could explore it together, leading to the founding of Wake Forest's Artificial Intelligence Club. The idea came easily; the process that followed didn't. Recruiting committed members and building a structure that kept people engaged taught me a lot about what it actually takes to turn an idea into a working organization. In my final year, our club had the opportunity to take on a faculty-advised research project focused on segmenting lung infections from CT scans.</p>
+          <div class="tl-photos">
+            <img src="aiclub-1.jpg" alt="Wake Forest Artificial Intelligence Club meeting" loading="lazy">
+            <img src="aiclub-2.jpg" alt="Wake Forest Artificial Intelligence Club presenting research" loading="lazy">
+          </div>
         </div>
       </div>
       <div class="tl-item">
@@ -385,9 +394,11 @@
           <span class="tl-org">— Wake Forest University</span>
           <span class="tl-date">Aug 2025 – May 2026</span>
         </div>
-        <p>As a Resident Advisor at Wake Forest, I served as a point of contact for 34 students, which meant a lot of listening before anything else, helping students navigate roommate conflicts, personal challenges, and the everyday friction of living in close quarters with people they sometimes didn't choose. Beyond the one on one side of the role, I worked with housing staff and campus partners to plan and run educational and community programs, aimed at building a residential community people actually wanted to be part of rather than just lived in. The role reinforced something I'd already been learning through my other leadership roles: that no two students, or two problems, needed the same approach, and being a good resource meant staying flexible rather than relying on a script.</p>
-        <div class="tl-photos">
-          <img src="ra-1.jpg" alt="Resident Advisor community event at Wake Forest" loading="lazy">
+        <div class="tl-body">
+          <p>As a Resident Advisor at Wake Forest, I served as a point of contact for 34 students, which meant a lot of listening before anything else, helping students navigate roommate conflicts, personal challenges, and the everyday friction of living in close quarters with people they sometimes didn't choose. Beyond the one on one side of the role, I worked with housing staff and campus partners to plan and run educational and community programs, aimed at building a residential community people actually wanted to be part of rather than just lived in. The role reinforced something I'd already been learning through my other leadership roles: that no two students, or two problems, needed the same approach, and being a good resource meant staying flexible rather than relying on a script.</p>
+          <div class="tl-photos">
+            <img src="ra-1.jpg" alt="Resident Advisor community event at Wake Forest" loading="lazy">
+          </div>
         </div>
       </div>
     </div>
