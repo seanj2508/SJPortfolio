@@ -166,7 +166,7 @@
     background:var(--card);
   }
   .photo-frame img{
-    width:100%; display:block; filter:grayscale(15%) contrast(1.03);
+    width:100%; aspect-ratio:1/1; object-fit:cover; display:block; filter:grayscale(15%) contrast(1.03);
   }
   .photo-cap{
     font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft);
@@ -195,6 +195,12 @@
   .tl-date{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin-left:auto;}
   .tl-item ul{margin-left:20px; color:var(--ink-soft); font-size:15px;}
   .tl-item li{margin-bottom:6px;}
+  .tl-photos{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;}
+  .tl-photos img{
+    width:160px; height:120px; object-fit:cover;
+    border:1px solid var(--line); filter:grayscale(15%) contrast(1.03);
+  }
+  @media (max-width:480px){ .tl-photos img{width:47%; height:100px;} }
 
   /* PROJECTS */
   .proj-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px;}
@@ -204,6 +210,12 @@
     transition:border-color .15s, transform .15s;
   }
   .proj-card:hover{border-color:var(--teal); transform:translateY(-2px);}
+  .proj-card img.proj-banner{
+    width:calc(100% + 48px); margin:-26px -24px 4px;
+    height:170px; object-fit:cover;
+    border-bottom:1px solid var(--line);
+    filter:grayscale(10%) contrast(1.03);
+  }
   .proj-card h3{font-size:20px;}
   .proj-card p{color:var(--ink-soft); font-size:14.5px;}
   .stat-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; padding-top:10px; border-top:1px dashed var(--line);}
@@ -279,8 +291,8 @@
 <main>
   <!-- HERO -->
   <section class="hero wrap">
-    <div class="hero-kicker">Winston-Salem, NC &nbsp;·&nbsp; Business Analytics, MSBA Candidate</div>
-    <h1>Sean Jones<br><span class="accent">turns numbers into decisions.</span></h1>
+    <div class="hero-kicker">Winston-Salem, NC &nbsp;·&nbsp; Business Intelligence/Data Analyst</div>
+    <h1>Sean Jones<br><span class="accent">Data-Driven · Futuristic · Developer</span></h1>
     <p class="lede">I build the pipelines, dashboards, and models that sit between raw data and the next move a business makes — currently sharpening that craft as a Business Analytics graduate student at Wake Forest University.</p>
     <div class="cta-row">
       <a class="btn btn-solid" href="#projects">View Projects →</a>
@@ -318,20 +330,20 @@
     <div class="about-grid">
       <div>
         <div class="photo-frame">
-          <img src="profile.jpg" alt="Portrait of Sean Jones" width="800" height="800" loading="lazy">
+          <img src="profile.jpg" alt="Portrait of Sean Jones" loading="lazy">
         </div>
         <div class="photo-cap">SEAN JONES</div>
       </div>
       <div class="about-body">
-        <p>I've always seen numbers as more than data — they're the story behind a business's next move. Building on a B.S. in Computer Science from Wake Forest University, with minors in Mathematics and Psychology, I'm now pursuing a Master of Science in Business Analytics there, sharpening a technical foundation with the analytical and interpersonal skills it takes to turn raw numbers into insight someone can act on.</p>
-        <p>My focus is analytics and machine learning: building predictive models, structuring real data pipelines, and using Python, SQL, Excel, and Power BI to find the pattern that changes a decision. Outside the classroom, I founded and led Wake Forest's Artificial Intelligence Club and served as President of the university's chapter of Kappa Alpha Psi Fraternity Inc. — both of which pushed my technical curiosity and my ability to lead a team toward a shared goal.</p>
-        <p>I'm looking for a role in Business Intelligence or Data Analytics, where I can bring a problem-solving mindset and a collaborative approach to work that turns data into meaningful impact.</p>
+        <p>I was born and raised in South Florida, and for as long as I can remember, it has always been the <em>why</em> that has driven me. Not just what happened, but what caused it, and what that can mean for what comes next. As a kid, it showed up as an endless stream of questions. Today, it shows up as a career.</p>
+        <p>It was this curiosity that pulled me from a foundation in Computer Science into Business Analytics as a graduate student, sharpening the technical and interpersonal skills it takes to turn a question into an answer someone can act on. Outside the classroom, that same instinct shows up as leadership, roles that have less to do with data and more with listening, adapting, and finding the actual problem underneath what someone brings to you.</p>
+        <p>To me, every dataset is a record of decisions, behaviors, and outcomes waiting for analysis. That's what you'll find here, so when you look through this site, think of it as a few answers to questions I got curious enough to go chase down.</p>
 
         <dl class="facts">
           <div class="fact"><dt>Currently</dt><dd>MSBA Candidate, Wake Forest University (May 2027)</dd></div>
           <div class="fact"><dt>Focus</dt><dd>Business Intelligence &amp; Data Analytics</dd></div>
           <div class="fact"><dt>Based in</dt><dd>Winston-Salem, NC</dd></div>
-          <div class="fact"><dt>Core stack</dt><dd>Python · SQL · Power BI</dd></div>
+          <div class="fact"><dt>Core stack</dt><dd>Python · SQL · Power BI · Excel</dd></div>
         </dl>
       </div>
     </div>
@@ -352,6 +364,10 @@
           <li>Led strategic initiatives and operational oversight for the chapter, working closely with the executive board and partner organizations to align fundraising and service efforts with chapter goals.</li>
           <li>Grew chapter visibility and community engagement through fundraising and service projects, building a culture of consistent member participation.</li>
         </ul>
+        <div class="tl-photos">
+          <img src="kappa-1.jpg" alt="Kappa Alpha Psi Fraternity Inc., Wake Forest chapter" loading="lazy">
+          <img src="kappa-2.jpg" alt="Kappa Alpha Psi Fraternity Inc., Wake Forest chapter" loading="lazy">
+        </div>
       </div>
       <div class="tl-item">
         <div class="tl-head">
@@ -363,6 +379,10 @@
           <li>Founded and led a 15-member student organization on AI concepts and applications — weekly meetings, guest speakers, and a faculty-advised technical research project.</li>
           <li>Directed a research initiative building a patch-based feedforward neural network in TensorFlow/Keras, reaching 76% test accuracy on 4-class lung infection segmentation from CT imagery despite severe class imbalance.</li>
         </ul>
+        <div class="tl-photos">
+          <img src="aiclub-1.jpg" alt="Wake Forest Artificial Intelligence Club" loading="lazy">
+          <img src="aiclub-2.jpg" alt="Wake Forest Artificial Intelligence Club" loading="lazy">
+        </div>
       </div>
       <div class="tl-item">
         <div class="tl-head">
@@ -385,6 +405,7 @@
     <div class="proj-grid">
 
       <div class="proj-card">
+        <img class="proj-banner" src="project-airbnb.jpg" alt="Airbnb Pricing Intelligence Dashboard" loading="lazy">
         <h3>Airbnb Pricing Intelligence Dashboard</h3>
         <p>Cleaned and structured raw Nashville listings data in Excel, then engineered a SQL (SQLite) transformation layer — aggregation views, window functions (RANK), subqueries — to segment districts by sample reliability and price tier. Built a Power BI dashboard revealing a 3-tier pricing structure, showing that top-priced districts draw their averages from a mix of medium- and high-tier listings rather than uniformly luxury inventory.</p>
         <div class="stat-row">
@@ -395,6 +416,7 @@
       </div>
 
       <div class="proj-card">
+        <img class="proj-banner" src="project-props.jpg" alt="NBA / WNBA Player Props Prediction System" loading="lazy">
         <h3>NBA / WNBA Player Props Prediction System</h3>
         <p>Built a PyTorch pipeline processing 70K+ game logs across 50+ engineered features to predict six stat categories for 470+ tracked players. Pulled real-time prop odds via The Odds API across four markets, applying head-to-head feature engineering and calibration-offset tuning, then used EV-based filtering to isolate high-edge wagers.</p>
         <div class="stat-row">
@@ -405,6 +427,7 @@
       </div>
 
       <div class="proj-card">
+        <img class="proj-banner" src="project-lung.jpg" alt="Lung Infection Segmentation from CT Imagery" loading="lazy">
         <h3>Lung Infection Segmentation from CT Imagery</h3>
         <p>Faculty-advised AI Club research project: a patch-based feedforward neural network built in TensorFlow/Keras for 4-class segmentation of lung infection regions in CT scans, tuned to hold up under severe class imbalance in the training data.</p>
         <div class="stat-row">
