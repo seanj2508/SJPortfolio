@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F2F4EF;
-    --paper-alt:#E9ECE5;
-    --ink:#111A16;
-    --ink-soft:#4B564F;
+    --paper:#F0E4CE;
+    --paper-alt:#E7D8B8;
+    --ink:#2A2016;
+    --ink-soft:#6B5D45;
     --teal:#1F6F63;
     --teal-deep:#154A42;
     --amber:#D98E04;
-    --line:#D6DACE;
-    --card:#FBFCFA;
+    --line:#DAC9A3;
+    --card:#FAF4E6;
     --radius:2px;
     --max:1120px;
   }
@@ -31,11 +31,6 @@
     color:var(--ink);
     font-family:'IBM Plex Sans', sans-serif;
     line-height:1.6;
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size:48px 48px;
-    background-position:-1px -1px;
   }
 
   .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
@@ -60,7 +55,7 @@
   /* ---------- NAV ---------- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(242,244,239,.86);
+    background:rgba(240,228,206,.86);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
@@ -260,18 +255,18 @@
   footer .eyebrow{color:var(--amber);}
   footer .eyebrow::before{color:var(--amber);}
   footer h2{color:var(--paper); font-size:clamp(28px,4vw,44px); margin-bottom:18px; max-width:640px;}
-  footer p{color:#B8C2BC; max-width:520px; margin-bottom:34px; font-size:16px;}
+  footer p{color:#C9B99A; max-width:520px; margin-bottom:34px; font-size:16px;}
   .contact-row{display:flex; flex-wrap:wrap; gap:16px; margin-bottom:56px;}
   footer .btn-solid{background:var(--amber); border-color:var(--amber); color:var(--ink);}
   footer .btn-solid:hover{background:#fff; border-color:#fff;}
-  footer .btn-line{border-color:#3A463F; color:var(--paper);}
+  footer .btn-line{border-color:#4A3E2C; color:var(--paper);}
   footer .btn-line:hover{border-color:var(--paper);}
   .foot-bottom{
     display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
-    border-top:1px solid #2A342E; padding-top:24px;
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:#7C8880;
+    border-top:1px solid #4A3E2C; padding-top:24px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:#9A8968;
   }
-  .foot-bottom a{text-decoration:none; color:#B8C2BC;}
+  .foot-bottom a{text-decoration:none; color:#C9B99A;}
   .foot-bottom a:hover{color:var(--paper);}
 
   ::selection{background:var(--teal); color:#fff;}
