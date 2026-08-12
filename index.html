@@ -98,9 +98,19 @@
   .hero h1 .name-last{
     color:var(--teal);
   }
-  @supports (-webkit-text-stroke: 1px) or (text-stroke: 1px){
-    .hero h1 .name-first{ color:transparent; -webkit-text-stroke:1.5px var(--ink); text-stroke:1.5px var(--ink); }
-    .hero h1 .name-last{ color:transparent; -webkit-text-stroke:1.5px var(--teal); text-stroke:1.5px var(--teal); }
+  .hero h1 .letter{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(-140px);
+    animation:letter-fall .7s cubic-bezier(.33,1.4,.55,1) forwards;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero h1 .letter{ opacity:1; transform:none; animation:none; }
+  }
+  @keyframes letter-fall{
+    0%{ opacity:0; transform:translateY(-140px) rotate(-6deg); }
+    60%{ opacity:1; }
+    100%{ opacity:1; transform:translateY(0) rotate(0deg); }
   }
   .hero .tech-line{
     font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--ink-soft);
@@ -316,7 +326,7 @@
     <div class="wrap">
       <div class="hero-inner">
         <div class="hero-kicker">Business Intelligence / Data Analyst &nbsp;&middot;&nbsp; 2026</div>
-        <h1><span class="name-first">Sean</span> <span class="name-last">Jones</span></h1>
+        <h1><span class="name-first"><span class="letter" style="animation-delay:0.05s">S</span><span class="letter" style="animation-delay:0.10s">e</span><span class="letter" style="animation-delay:0.15s">a</span><span class="letter" style="animation-delay:0.20s">n</span></span> <span class="name-last"><span class="letter" style="animation-delay:0.30s">J</span><span class="letter" style="animation-delay:0.35s">o</span><span class="letter" style="animation-delay:0.40s">n</span><span class="letter" style="animation-delay:0.45s">e</span><span class="letter" style="animation-delay:0.50s">s</span></span></h1>
         <div class="tech-line">PYTHON &middot; SQL &middot; POWER BI &middot; EXCEL</div>
         <p class="lede">I build the pipelines, dashboards, and models that sit between raw data and the next move a business makes &mdash; currently sharpening that craft as a Business Analytics graduate student at Wake Forest University.</p>
         <div class="cta-row">
