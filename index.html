@@ -10,15 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#0A0A0A;
-    --paper-alt:#131313;
+    --paper:#1C1C1E;
+    --paper-alt:#242426;
     --ink:#F2F1ED;
-    --ink-soft:#8C8C90;
+    --ink-soft:#9A9A9E;
     --teal:#E8621B;
     --teal-deep:#C24E13;
     --amber:#F2934D;
-    --line:#232326;
-    --card:#111113;
+    --line:#333335;
+    --card:#242426;
     --radius:2px;
     --max:1220px;
   }
@@ -54,7 +54,7 @@
   /* ---------- NAV ---------- */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(10,10,10,.82);
+    background:rgba(28,28,30,.82);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
@@ -259,23 +259,23 @@
 
   /* CONTACT / FOOTER */
   footer{
-    background:#0B0908; color:var(--ink);
+    background:#151517; color:var(--ink);
     padding:70px 0 34px;
   }
   footer .eyebrow{color:var(--teal);}
   footer h2{color:var(--ink); font-size:clamp(28px,4vw,44px); margin-bottom:18px; max-width:640px;}
-  footer p{color:#C9AE95; max-width:520px; margin-bottom:34px; font-size:16px;}
+  footer p{color:#B8B8BC; max-width:520px; margin-bottom:34px; font-size:16px;}
   .contact-row{display:flex; flex-wrap:wrap; gap:16px; margin-bottom:56px;}
   footer .btn-solid{background:var(--amber); border-color:var(--amber); color:#141110;}
   footer .btn-solid:hover{background:#fff; border-color:#fff;}
-  footer .btn-line{border-color:#3A2A1E; color:var(--ink);}
+  footer .btn-line{border-color:#3A3A3D; color:var(--ink);}
   footer .btn-line:hover{border-color:var(--ink);}
   .foot-bottom{
     display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px;
-    border-top:1px solid #3A2A1E; padding-top:24px;
-    font-family:'IBM Plex Mono', monospace; font-size:12px; color:#A8927A;
+    border-top:1px solid #3A3A3D; padding-top:24px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:#7A7A7E;
   }
-  .foot-bottom a{text-decoration:none; color:#C9AE95;}
+  .foot-bottom a{text-decoration:none; color:#B8B8BC;}
   .foot-bottom a:hover{color:var(--ink);}
 
   ::selection{background:var(--teal); color:#fff;}
