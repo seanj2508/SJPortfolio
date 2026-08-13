@@ -447,9 +447,10 @@
       <div class="proj-card">
         <img class="proj-banner" src="project-lung.jpg" alt="Lung Infection Segmentation from CT Imagery" loading="lazy">
         <h3>Lung Infection Segmentation from CT Imagery</h3>
-        <p>Faculty-advised AI Club research project: a patch-based feedforward neural network built in TensorFlow/Keras for 4-class segmentation of lung infection regions in CT scans, tuned to hold up under severe class imbalance in the training data.</p>
+        <p>As part of Wake Forest's AI Club, we took on a faculty-advised research project identifying different types of lung infection in CT scans, where the regions of interest are often just a handful of pixels in a 512&times;512 image. We built a patch-based feedforward neural network in TensorFlow/Keras, extracting overlapping patches from each scan and training a classifier to label the tissue at their center. The real challenge wasn't the architecture. It was the class imbalance, since healthy tissue vastly outnumbers infected tissue in every scan, so a naive model can hit high accuracy by just guessing the majority class everywhere. We addressed this with aggressive class weighting and reached 76% test accuracy across four tissue classes despite that imbalance. It's still an imperfect model, some predicted regions are far cruder than the ground truth, but it was a real lesson in how deceptive raw accuracy can be on medical imaging data.</p>
         <div class="stat-row">
           <div class="stat"><span class="num">76%</span><span class="lbl">Test accuracy</span></div>
+          <div class="stat"><span class="num">0.74</span><span class="lbl">Weighted F1-score</span></div>
           <div class="stat"><span class="num">4-class</span><span class="lbl">Segmentation task</span></div>
         </div>
       </div>
