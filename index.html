@@ -112,10 +112,18 @@
     60%{ opacity:1; }
     100%{ opacity:1; transform:translateY(0) rotate(0deg); }
   }
-  .hero .tech-line{
-    font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--ink-soft);
-    letter-spacing:.06em; margin-bottom:26px;
+  .hero .tagline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    margin-bottom:28px;
+    display:flex; flex-wrap:wrap; gap:2px;
   }
+  .hero .tagline .word{font-weight:600;}
+  .hero .tagline .word.a{color:var(--ink);}
+  .hero .tagline .word.b{color:var(--teal);}
+  .hero .tagline .sep{color:var(--line); margin:0 10px;}
   .hero p.lede{
     max-width:520px;
     font-size:17px;
@@ -325,9 +333,9 @@
     </div>
     <div class="wrap">
       <div class="hero-inner">
-        <div class="hero-kicker">Business Intelligence / Data Analyst &nbsp;&middot;&nbsp; 2026</div>
+        <div class="hero-kicker">Business Intelligence / Data Analyst</div>
         <h1><span class="name-first"><span class="letter" style="animation-delay:0.05s">S</span><span class="letter" style="animation-delay:0.10s">e</span><span class="letter" style="animation-delay:0.15s">a</span><span class="letter" style="animation-delay:0.20s">n</span></span> <span class="name-last"><span class="letter" style="animation-delay:0.30s">J</span><span class="letter" style="animation-delay:0.35s">o</span><span class="letter" style="animation-delay:0.40s">n</span><span class="letter" style="animation-delay:0.45s">e</span><span class="letter" style="animation-delay:0.50s">s</span></span></h1>
-        <div class="tech-line">PYTHON &middot; SQL &middot; POWER BI &middot; EXCEL</div>
+        <div class="tagline"><span class="word a">Data-Driven</span><span class="sep">&middot;</span><span class="word b">Futuristic</span><span class="sep">&middot;</span><span class="word a">Developer</span></div>
         <p class="lede">I build the pipelines, dashboards, and models that sit between raw data and the next move a business makes &mdash; currently sharpening that craft as a Business Analytics graduate student at Wake Forest University.</p>
         <div class="cta-row">
           <a class="btn btn-solid" href="#projects">View Projects</a>
@@ -515,7 +523,7 @@
   <div class="wrap">
     <div class="eyebrow">Contact</div>
     <h2>Let's talk about a Business Intelligence or Data Analytics role.</h2>
-    <p>I'm on the market for full-time and internship opportunities where I can turn data into decisions a team can act on. The fastest way to reach me is email.</p>
+    <p>I'm on the market for full-time opportunities where I can turn data into decisions a team can act on. The fastest way to reach me is email.</p>
     <div class="contact-row">
       <a class="btn btn-solid" href="mailto:jonesm22@wfu.edu">jonesm22@wfu.edu</a>
       <a class="btn btn-line" href="https://www.linkedin.com/in/seanjones2285" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -523,7 +531,7 @@
       <a class="btn btn-line" href="SeanJonesResume.pdf" download>Résumé (PDF)</a>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Sean Jones</span>
+      <span>&copy; Sean Jones</span>
       <span>Built with data, curiosity, and probably too many tabs open.</span>
     </div>
   </div>
