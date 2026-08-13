@@ -233,7 +233,8 @@
   .proj-card:hover{border-color:var(--teal); transform:translateY(-2px);}
   .proj-card img.proj-banner{
     width:calc(100% + 48px); margin:-26px -24px 4px;
-    height:210px; object-fit:cover; object-position:top;
+    height:210px; object-fit:contain; object-position:center;
+    background:var(--paper-alt);
     border-bottom:1px solid var(--line);
     filter:grayscale(10%) contrast(1.03);
   }
@@ -436,11 +437,12 @@
       <div class="proj-card">
         <img class="proj-banner" src="project-props.jpg" alt="NBA / WNBA Player Props Prediction System" loading="lazy">
         <h3>NBA / WNBA Player Props Prediction System</h3>
-        <p>Built a PyTorch pipeline processing 70K+ game logs across 50+ engineered features to predict six stat categories for 470+ tracked players. Pulled real-time prop odds via The Odds API across four markets, applying head-to-head feature engineering and calibration-offset tuning, then used EV-based filtering to isolate high-edge wagers.</p>
+        <p>Built an end-to-end sports betting ML pipeline using a PyTorch multi-output neural network trained on 72,000+ game logs across 57 engineered features, pulling live DraftKings lines via The Odds API to calculate expected value on every available prop and filter only statistically favorable wagers. The core challenge was calibration, addressed through head-to-head feature engineering, a rolling nightly bias monitoring system, and a rebuilt prediction function that injects live opponent context dynamically at inference time rather than reusing stale matchup data. Across 400+ live tracked outcomes, high-conviction bets filtered above a 20% edge threshold achieved a 56.7% win rate against a 52.4% breakeven, with a 12-point gap versus unfiltered bets confirming the edge signal is real.</p>
         <div class="stat-row">
-          <div class="stat"><span class="num">70K+</span><span class="lbl">Game logs</span></div>
+          <div class="stat"><span class="num">72K+</span><span class="lbl">Game logs</span></div>
           <div class="stat"><span class="num">56.7%</span><span class="lbl">High-edge win rate</span></div>
           <div class="stat"><span class="num">52.4%</span><span class="lbl">Breakeven line</span></div>
+          <div class="stat"><span class="num">+12pt</span><span class="lbl">Edge vs. unfiltered bets</span></div>
         </div>
       </div>
 
