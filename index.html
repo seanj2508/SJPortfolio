@@ -237,6 +237,7 @@
     background:var(--card); border:1px solid var(--line); padding:26px 24px;
     display:flex; flex-direction:column; gap:14px;
     transition:border-color .15s, transform .15s;
+    text-decoration:none; color:inherit; cursor:pointer;
   }
   .proj-card:hover{border-color:var(--teal); transform:translateY(-2px);}
   .proj-link{
@@ -244,7 +245,7 @@
     text-decoration:none; display:inline-flex; align-items:center; gap:6px;
     margin-top:2px; width:fit-content;
   }
-  .proj-link:hover{color:var(--ink);}
+  .proj-card:hover .proj-link{color:var(--ink);}
   .proj-card img.proj-banner{
     width:calc(100% + 48px); margin:-26px -24px 4px;
     height:210px; object-fit:fill;
@@ -435,7 +436,7 @@
     <h2 class="section-title">Analytical Project Experience</h2>
     <div class="proj-grid">
 
-      <div class="proj-card">
+      <a class="proj-card" href="https://github.com/seanj2508/Nashville-AirBnb-Dashboard" target="_blank" rel="noopener">
         <img class="proj-banner" src="project-airbnb.jpg" alt="Airbnb Pricing Intelligence Dashboard" loading="lazy">
         <h3>Airbnb Pricing Intelligence Dashboard</h3>
         <p>Built an end-to-end BI pipeline analyzing 7,467 Nashville Airbnb listings, moving from raw data cleaning in Excel through a SQL (SQLite) transformation layer to a 3-page interactive Power BI dashboard. Engineered aggregation views, window functions, and subquery-based sample-reliability flagging to segment districts and host types by price. Found that professional hosts, those managing 6 or more listings, control over half the market and command a roughly 32% price premium while skewing toward High-tier pricing at nearly twice the rate of individual hosts. Also discovered that pricing drops sharply at the 30-night booking threshold, and that premium-tier listings actually convert to bookings less consistently than mid-priced ones, a demand trade-off invisible in the raw averages.</p>
@@ -445,8 +446,8 @@
           <div class="stat"><span class="num">50.6%</span><span class="lbl">Listings run by professional hosts</span></div>
           <div class="stat"><span class="num">2x</span><span class="lbl">Higher high-tier share: professional vs. individual hosts</span></div>
         </div>
-        <a class="proj-link" href="https://github.com/seanj2508/Nashville-AirBnb-Dashboard" target="_blank" rel="noopener">View on GitHub &#8599;</a>
-      </div>
+        <span class="proj-link">View on GitHub &#8599;</span>
+      </a>
 
       <div class="proj-card">
         <img class="proj-banner" src="project-props.jpg" alt="NBA / WNBA Player Props Prediction System" loading="lazy">
