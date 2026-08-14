@@ -179,6 +179,7 @@
   /* ---------- SECTIONS ---------- */
   section{padding:76px 0;}
   section#about{padding-top:64px;}
+  section#experience, section#projects, section#skills{margin-top:40px;}
   .section-title{font-size:clamp(26px,3.4vw,34px); margin-bottom:34px; font-weight:600;}
 
   /* ABOUT */
@@ -262,6 +263,17 @@
   }
   .stat .num{font-size:17px; font-weight:600; color:var(--teal-deep);}
   .stat .lbl{color:var(--ink-soft); font-size:10.5px; text-transform:uppercase; letter-spacing:.03em;}
+
+  /* INTRO VIDEO */
+  .video-wrap{
+    max-width:820px; border:1px solid var(--line); background:var(--card);
+    border-radius:2px; overflow:hidden;
+  }
+  .video-wrap video{width:100%; display:block; background:#000;}
+  .video-note{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);
+    margin-top:14px;
+  }
 
   /* SKILLS & EDUCATION */
   .section-title.small{font-size:22px; margin-bottom:8px; font-weight:600;}
@@ -380,6 +392,18 @@
         </dl>
       </div>
     </div>
+  </section>
+
+  <!-- VIDEO INTRO -->
+  <section id="video-intro" class="wrap">
+    <div class="eyebrow">Video Introduction</div>
+    <div class="video-wrap">
+      <video controls preload="metadata" poster="intro-poster.jpg" playsinline>
+        <source src="intro.mp4" type="video/mp4">
+        Your browser doesn't support embedded video. You can <a href="intro.mp4">download the video</a> instead.
+      </video>
+    </div>
+    <p class="video-note">A short video introduction.</p>
   </section>
 
   <!-- EXPERIENCE -->
