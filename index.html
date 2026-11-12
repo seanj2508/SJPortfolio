@@ -404,6 +404,19 @@
       </div>
       <div class="tl-item">
         <div class="tl-head">
+          <span class="tl-role">Founder</span>
+          <span class="tl-org">— Artificial Intelligence Club, Wake Forest University</span>
+          <span class="tl-date">Oct 2024 – May 2026</span>
+        </div>
+        <div class="tl-body">
+          <p>Recognizing a growing interest among students in engaging with the rapidly evolving field of AI, a classmate and I set out to create a space where students could explore it together, leading to the founding of Wake Forest's Artificial Intelligence Club. The idea came easily; the process that followed didn't. Recruiting committed members and building a structure that kept people engaged taught me a lot about what it actually takes to turn an idea into a working organization. In my final year, our club had the opportunity to take on a faculty-advised research project focused on segmenting lung infections from CT scans.</p>
+          <div class="tl-photos">
+            <img src="aiclub-2.jpg" alt="Wake Forest Artificial Intelligence Club presenting research" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-head">
           <span class="tl-role">President</span>
           <span class="tl-org">— Kappa Alpha Psi Fraternity Inc., Wake Forest (Omicron Sigma Chapter)</span>
           <span class="tl-date">Apr 2025 – May 2026</span>
@@ -413,19 +426,6 @@
           <div class="tl-photos">
             <img src="kappa-1.jpg" alt="Reading and monkey bread event at a local elementary school" loading="lazy">
             <img src="kappa-2.jpg" alt="Preparing a meal for families at the Ronald McDonald House" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-head">
-          <span class="tl-role">Founder</span>
-          <span class="tl-org">— Artificial Intelligence Club, Wake Forest University</span>
-          <span class="tl-date">Oct 2024 – May 2026</span>
-        </div>
-        <div class="tl-body">
-          <p>Recognizing a growing interest among students in engaging with the rapidly evolving field of AI, a classmate and I set out to create a space where students could explore it together, leading to the founding of Wake Forest's Artificial Intelligence Club. The idea came easily; the process that followed didn't. Recruiting committed members and building a structure that kept people engaged taught me a lot about what it actually takes to turn an idea into a working organization. In my final year, our club had the opportunity to take on a faculty-advised research project focused on segmenting lung infections from CT scans.</p>
-          <div class="tl-photos">
-            <img src="aiclub-2.jpg" alt="Wake Forest Artificial Intelligence Club presenting research" loading="lazy">
           </div>
         </div>
       </div>
@@ -460,6 +460,19 @@
           <div class="stat"><span class="num">35</span><span class="lbl">Districts segmented</span></div>
           <div class="stat"><span class="num">50.6%</span><span class="lbl">Listings run by professional hosts</span></div>
           <div class="stat"><span class="num">2x</span><span class="lbl">Higher high-tier share: professional vs. individual hosts</span></div>
+        </div>
+        <span class="proj-link">View on GitHub &#8599;</span>
+      </a>
+
+      <a class="proj-card" href="https://github.com/seanj2508/nashville_airbnb_ml" target="_blank" rel="noopener">
+        <img class="proj-banner" src="project-ml.jpg" alt="OLS regression results for the Nashville Airbnb price model" loading="lazy">
+        <h3>Nashville Airbnb Price Prediction Model</h3>
+        <p>Built a linear regression model on log price using 8,171 Nashville Airbnb listings from Inside Airbnb to predict nightly rates and identify which property, host, and location factors drive them. Cleaned the data and engineered features such as distance from Lower Broadway, amenity flags, and grouped property types, then narrowed 66 candidate predictors to 34 using F-tests and cross-validated stepwise selection. Tested the model against regression assumptions and confirmed the results held after removing the most influential listings. Found that hot tubs add about 17% to price and a skyline view about 10%, while listings 5 to 10 km from downtown price about 14% lower. The model is best suited to comparing listings and understanding price drivers rather than setting exact prices, since it tends to underprice the most expensive listings.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="num">8,171</span><span class="lbl">Listings modeled</span></div>
+          <div class="stat"><span class="num">34</span><span class="lbl">Predictors selected from 66</span></div>
+          <div class="stat"><span class="num">0.61</span><span class="lbl">Test R&sup2; on log price</span></div>
+          <div class="stat"><span class="num">$117</span><span class="lbl">Mean absolute error per night</span></div>
         </div>
         <span class="proj-link">View on GitHub &#8599;</span>
       </a>
@@ -568,7 +581,7 @@
   const parseVal = (txt) => {
     const m = txt.match(/^([\d,.]+)(.*)$/);
     if(!m) return null;
-    return { num: parseFloat(m[1].replace(/,/g,'')), suffix: m[2], raw: txt, hasComma: m[1].includes(',') };
+    return { num: parseFloat(m[1].replace(/,/g,'')), suffix: m[2], raw: txt, hasComma: m[1].includes(','), dec: (m[1].split('.')[1]||'').length };
   };
   const animate = (el) => {
     const parsed = parseVal(el.textContent.trim());
@@ -581,7 +594,7 @@
       const p = Math.min((now-start)/dur, 1);
       const eased = 1 - Math.pow(1-p, 3);
       let val = target * eased;
-      let display = isInt ? Math.round(val) : val.toFixed(1);
+      let display = isInt ? Math.round(val) : val.toFixed(parsed.dec || 1);
       if(parsed.hasComma) display = Number(display).toLocaleString();
       el.textContent = display + parsed.suffix;
       if(p < 1) requestAnimationFrame(frame);
